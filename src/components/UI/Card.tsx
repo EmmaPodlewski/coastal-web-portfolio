@@ -11,7 +11,7 @@ const Card = ({ title, image, alt, body }: Props) => {
   return (
     <motion.div
       whileHover={{ y: [0, -10] }}
-      className="flex flex-col items-center w-1/4 drop-shadow-2xl rounded p-4"
+      className="flex flex-col items-center w-1/4 shadow-lg rounded-md p-4"
     >
       <img className="rounded-md h-[120px] pb-4 " src={image} alt={alt} />
       <div className="flex flex-col items-center justify-center mb-4">
