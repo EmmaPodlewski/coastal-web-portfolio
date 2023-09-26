@@ -6,7 +6,7 @@ interface IProps {
 }
 const Tags = ({ skills, color }: IProps) => {
   return (
-    <div className="flex flex-wrap gap-1 pb-2">
+    <div className="flex flex-wrap text-white gap-1 pb-2">
       {skills.map((skill) => (
         <Tag key={skill} title={skill} color={color} />
       ))}
