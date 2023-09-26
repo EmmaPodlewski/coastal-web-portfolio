@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+interface IProps {
+  onSectionSelected: (selector: string) => void;
+}
 const NAVBAR_LIST = [
   { title: "All", selector: "all" },
   { title: "Web Development", selector: "web" },
@@ -7,26 +10,28 @@ const NAVBAR_LIST = [
   { title: "Custom API Integration", selector: "api" },
 ];
 
-const SecondaryNavbar = () => {
+const SecondaryNavbar = ({ onSectionSelected }: IProps) => {
   const [selectedEvent, setSelectedEvent] = useState("all");
+  debugger;
+  const sectionSelectedHandler = (selectedItem: string) => {
+    setSelectedEvent(selectedItem);
+    onSectionSelected(selectedItem);
+    return;
+  };
   return (
-    <div className="flex flex-col items-center w-full mb-4">
-      <div className="w-3/4">
-        <ul className="flex justify-between items-center text-center text-purple">
-          {NAVBAR_LIST.map((item) => (
-            <li
-              key={item.selector}
-              className={` ${
-                selectedEvent === item.selector && "bg-purple text-white"
-              } is-small-caps tablinks w-1/4 rounded-md drop-shadow hover:bg-purple hover:text-white p-1 `}
-              onClick={() => setSelectedEvent(item.selector)}
-            >
-              {item.title}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <ul className="flex flex-col w-1/4 text-purple">
+      {NAVBAR_LIST.map((item) => (
+        <li
+          key={item.selector}
+          className={` ${
+            selectedEvent === item.selector && "font-bold text-white"
+          } is-small-caps tablinks rounded-md drop-shadow hover:font-bold hover:text-white p-1 `}
+          onClick={() => sectionSelectedHandler(item.selector)}
+        >
+          {item.title}
+        </li>
+      ))}
+    </ul>
   );
 };
 

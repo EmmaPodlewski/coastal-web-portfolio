@@ -11,7 +11,12 @@ interface Props {
 const Section = (props: PropsWithChildren<Props>) => {
   const { children, id, title } = props;
   return (
-    <section id={id} className="flex flex-col item-center justify-center mt-4">
+    <section
+      id={id}
+      className={`${
+        id === "portfolio" && "bg-gradient-to-r from-green to-dark"
+      } flex flex-col item-center justify-center my-6 py-6 px-10`}
+    >
       <Header title={title} />
       {children}
     </section>
