@@ -1,3 +1,9 @@
+import Header from "./UI/Header";
+
 export default function Contact() {
-  return <h1>Contact</h1>;
+  return (
+    <div className="flex flex-col items-center" id="contact">
+      <Header title="Contact" />
+    </div>
+  );
 }

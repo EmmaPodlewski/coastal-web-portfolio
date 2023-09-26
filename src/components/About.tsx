@@ -1,3 +1,9 @@
+import Header from "./UI/Header";
+
 export default function About() {
-  return <h1>About</h1>;
+  return (
+    <div className="flex flex-col items-center" id="about">
+      <Header title="About Us" />
+    </div>
+  );
 }

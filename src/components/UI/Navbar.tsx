@@ -5,13 +5,14 @@ import classes from "./Navbar.module.css";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [isSelected, setIsSelected] = useState("/");
 
   const NAVBAR_LIST = [
     { title: "Home", link: "/" },
-    { title: "Expertise", link: "/expertise#main" },
-    { title: "Portfolio", link: "/portfolio" },
-    { title: "About Us", link: "/about" },
-    { title: "Contact", link: "/contact" },
+    { title: "Expertise", link: "#expertise" },
+    { title: "Portfolio", link: "#portfolio" },
+    { title: "About Us", link: "#about" },
+    { title: "Contact", link: "#contact" },
   ];
   return (
     <nav className="absolute h-14 z-10 w-screen">
@@ -34,10 +35,11 @@ export default function Navbar() {
             {NAVBAR_LIST.map((item) => (
               <li key={item.link}>
                 <NavLink
-                  className={({ isActive }) =>
-                    isActive ? classes.active : undefined
-                  }
+                  className={`
+                    ${isSelected === item.link ? classes.active : undefined}
+                  `}
                   to={item.link}
+                  onClick={() => setIsSelected(item.link)}
                 >
                   {item.title}
                 </NavLink>
