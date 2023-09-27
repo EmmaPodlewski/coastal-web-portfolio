@@ -10,8 +10,8 @@ interface IProps {
   githubUrl: string;
   email: string;
   skillsFrontEnd: string[];
-  skillsBackEnd: string[];
-  skillsAPI: string[];
+  backEnd: string[];
+  api: string[];
   skillsDb?: string[];
 }
 const Profile = ({
@@ -23,8 +23,8 @@ const Profile = ({
   githubUrl,
   email,
   skillsFrontEnd,
-  skillsBackEnd,
-  skillsAPI,
+  backEnd,
+  api,
   skillsDb,
 }: IProps) => {
   return (
@@ -63,10 +63,10 @@ const Profile = ({
         </div>
       </div>
       <div className="w-1/3">
-        <Tags skills={skillsFrontEnd} color="bg-indigo-700" />
-        <Tags skills={skillsBackEnd} color="bg-rose-700" />
-        <Tags skills={skillsAPI} color="bg-cyan-700" />
-        {skillsDb && <Tags skills={skillsDb} color="bg-violet-700" />}
+        <Tags skills={skillsFrontEnd} color="bg-tag-blue" />
+        <Tags skills={backEnd} color="bg-tag-green" />
+        <Tags skills={api} color="bg-tag-red" />
+        {skillsDb && <Tags skills={skillsDb} color="bg-tag-yellow" />}
       </div>
     </div>
   );

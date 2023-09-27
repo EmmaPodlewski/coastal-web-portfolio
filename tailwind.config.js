@@ -8,6 +8,12 @@ export default {
         "green-900": "#07889b",
         dark: "#1e272c",
         purple: "#431c5d",
+        tag: {
+          blue: "#209cee",
+          green: "#00d1b2",
+          red: "#ff3860",
+          yellow: "#ffdd57",
+        },
       },
     },
   },

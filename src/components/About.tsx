@@ -24,7 +24,7 @@ export default function About() {
           "Bootstrap",
           "Material Design",
         ]}
-        skillsBackEnd={[
+        backEnd={[
           "Python",
           "Django REST",
           "PHP",
@@ -35,7 +35,7 @@ export default function About() {
           "Ajax",
           "Ruby on Rails",
         ]}
-        skillsAPI={[
+        api={[
           "Custom API Development",
           "REST",
           "ZenDesk",
@@ -71,8 +71,8 @@ export default function About() {
           "Bootstrap",
           "Material Design",
         ]}
-        skillsBackEnd={["Python", "Django", "JSON"]}
-        skillsAPI={["Custom API Development", "REST", "Stripe", "FreshBooks"]}
+        backEnd={["Python", "Django", "JSON"]}
+        api={["Custom API Development", "REST", "Stripe", "FreshBooks"]}
       />
     </Section>
   );
