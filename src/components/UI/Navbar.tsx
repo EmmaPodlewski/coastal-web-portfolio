@@ -15,7 +15,7 @@ export default function Navbar() {
     { title: "Contact", link: "#contact" },
   ];
   return (
-    <nav className="absolute h-14 z-10 w-screen">
+    <nav className="absolute h-14 z-10 w-full">
       <div className="flex items-center justify-between h-full py-0 px-4 my-0 mr-4">
         <div className="logo"></div>
         <div

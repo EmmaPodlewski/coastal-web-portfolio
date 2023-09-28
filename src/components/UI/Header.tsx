@@ -8,7 +8,7 @@ const Header = ({ title }: Props) => {
   return (
     <motion.div
       whileInView={{
-        x: [-30, 0],
+        x: [-20, 0],
         transition: { duration: 1, delay: 0, type: "easeIn" },
       }}
       className="flex justify-center text-purple underline font-light text-4xl pb-6 animation-slide-in"
