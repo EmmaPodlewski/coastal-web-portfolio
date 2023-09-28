@@ -31,7 +31,7 @@ const SKILLS = [
 export default function Expertise() {
   return (
     <Section id="expertise" title="Our Expertise">
-      <div className="flex gap-8">
+      <div className="flex max-lg:flex-col gap-8">
         {SKILLS.map((skill) => (
           <Card
             key={skill.title}

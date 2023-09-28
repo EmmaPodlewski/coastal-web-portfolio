@@ -42,7 +42,7 @@ export default function Portfolio() {
           onSectionSelected={sectionSelectedHandler}
           selectedItem={selector}
         />
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:w-2/3 gap-2">
           {skillsToShow.map((skill) => {
             return (
               <PortfolioCard

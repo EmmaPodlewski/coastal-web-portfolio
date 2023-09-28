@@ -38,11 +38,12 @@ export default function About() {
         api={[
           "Custom API Development",
           "REST",
-          "ZenDesk",
-          "Stripe",
-          "FreshBooks",
-          "When I Work",
-          "Exact Online",
+          "ZenDesk API",
+          "Stripe API",
+          "FreshBooks API",
+          "When I Work API",
+          "Exact Online API",
+          "openAI",
         ]}
         skillsDb={[
           "Cloud Services",
@@ -72,7 +73,13 @@ export default function About() {
           "Material Design",
         ]}
         backEnd={["Python", "Django", "JSON"]}
-        api={["Custom API Development", "REST", "Stripe", "FreshBooks"]}
+        api={[
+          "Custom API Development",
+          "REST",
+          "Stripe",
+          "FreshBooks API",
+          "openAI",
+        ]}
       />
     </Section>
   );

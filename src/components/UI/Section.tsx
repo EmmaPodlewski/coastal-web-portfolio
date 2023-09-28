@@ -14,8 +14,11 @@ const Section = (props: PropsWithChildren<Props>) => {
     <section
       id={id}
       className={`${
-        id === "portfolio" && "bg-gradient-to-r from-green to-dark"
-      } flex flex-col item-center justify-center my-6 py-6 px-10`}
+        (id === "portfolio" || id === "contact") &&
+        "bg-gradient-to-r from-green to-dark"
+      } flex flex-col item-center justify-center ${
+        id === "contact" ? "mt-6 pt-6" : "py-6 my-6"
+      } px-10`}
     >
       <Header title={title} />
       {children}

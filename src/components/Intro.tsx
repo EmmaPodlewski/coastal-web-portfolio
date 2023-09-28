@@ -27,7 +27,7 @@ const Intro = () => {
   const subtitle = "Software Development Consulting";
   return (
     <div className="flex flex-col items-center h-screen justify-center text-white z-10">
-      <h1 className="z-10 pb-4">Coastal Web Development</h1>
+      <h1 className="text-center z-10 pb-4">Coastal Web Development</h1>
       <motion.h2
         variants={sentence}
         initial="hidden"

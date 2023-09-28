@@ -38,7 +38,7 @@ const Profile = ({
         src={image}
         alt="Alex Baizeau profile picture"
       />
-      <div className="text-center w-1/3">
+      <div className="text-center md:w-1/3">
         <h2 className="is-small-caps has-text-weight-bold text-white">
           {name}
         </h2>
@@ -62,7 +62,7 @@ const Profile = ({
           </a>
         </div>
       </div>
-      <div className="w-1/3">
+      <div className="md:w-1/3">
         <Tags skills={skillsFrontEnd} color="bg-tag-blue" />
         <Tags skills={backEnd} color="bg-tag-green" />
         <Tags skills={api} color="bg-tag-red" />

@@ -24,23 +24,24 @@ const PortfolioCard = ({
   return (
     <motion.div
       key={title}
-      className="flex hover:shadow-lg hover:bg-dark rounded p-2"
-      animate={{
-        x: [-20, 0],
-        transition: { duration: 1, delay: 0, type: "easeIn" },
+      className="flex flex-wrap lg:flex-nowrap hover:border rounded p-4"
+      whileInView={{
+        x: [-10, 0],
+        y: [-10, 0],
+        transition: { duration: 0.2, delay: 0, type: "easeIn" },
       }}
+      whileHover={{ scale: 1.03 }}
     >
-      <div className="flex w-7/12 lg:w-full">
-        <img className="rounded h-[250px] w-[470px]" src={image} alt={alt} />
-
-        <div className="text-white ml-4">
-          <p className="font-bold pb-1 sm:mt-2">{title}</p>
-          <p className="text-sm pb-3">{subtitle}</p>
-          {web && <Tags skills={web} color="bg-tag-blue" />}
-          {backEnd && <Tags skills={backEnd} color="bg-tag-green" />}
-          {api && <Tags skills={api} color="bg-tag-red" />}
-          {skillsDb && <Tags skills={skillsDb} color="bg-tag-yellow" />}
-        </div>
+      <div className="max-h-[250px] max-w-[470px]">
+        <img className="rounded" src={image} alt={alt} />
+      </div>
+      <div className="flex flex-col flex-wrap text-white ml-4">
+        <p className="font-bold pb-1 sm:mt-2">{title}</p>
+        <p className="text-sm pb-3">{subtitle}</p>
+        {web && <Tags skills={web} color="bg-tag-blue" />}
+        {backEnd && <Tags skills={backEnd} color="bg-tag-green" />}
+        {api && <Tags skills={api} color="bg-tag-red" />}
+        {skillsDb && <Tags skills={skillsDb} color="bg-tag-yellow" />}
       </div>
     </motion.div>
   );
