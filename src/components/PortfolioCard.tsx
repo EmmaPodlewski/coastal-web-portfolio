@@ -33,7 +33,7 @@ const PortfolioCard = ({
       whileHover={{ scale: 1.03 }}
     >
       <div className="max-h-[250px] max-w-[470px]">
-        <img className="rounded" src={image} alt={alt} />
+        <img className="rounded max-h-[250px]" src={image} alt={alt} />
       </div>
       <div className="flex flex-col flex-wrap text-white ml-4">
         <p className="font-bold pb-1 sm:mt-2">{title}</p>
