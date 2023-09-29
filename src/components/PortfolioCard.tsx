@@ -1,16 +1,7 @@
 import Tags from "./UI/Tags";
 import { motion } from "framer-motion";
+import { PortfolioProps } from "./utils/types";
 
-interface IProps {
-  title: string;
-  subtitle: string;
-  image: string;
-  alt: string;
-  web?: string[];
-  backEnd?: string[];
-  api?: string[];
-  skillsDb?: string[];
-}
 const PortfolioCard = ({
   title,
   subtitle,
@@ -20,7 +11,7 @@ const PortfolioCard = ({
   backEnd,
   api,
   skillsDb,
-}: IProps) => {
+}: PortfolioProps) => {
   return (
     <motion.div
       key={title}
