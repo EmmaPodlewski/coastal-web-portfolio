@@ -4,6 +4,17 @@ import Section from "./UI/Section";
 import { useState } from "react";
 import { portfolioSkills } from "./utils/constants";
 
+export interface PortfolioProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  alt: string;
+  web?: string[];
+  backEnd?: string[];
+  api?: string[];
+  skillsDb?: string[];
+}
+
 export default function Portfolio() {
   const [selector, setSelector] = useState("all");
   const [showMore, setShowMore] = useState(false);
@@ -16,7 +27,9 @@ export default function Portfolio() {
 
   if (selector !== "all") {
     const filteredExperiences = portfolioSkills.filter(
-      (skill) => skill[selector] && skill[selector]?.length !== 0
+      (skill) =>
+        skill[selector as keyof PortfolioProps] &&
+        skill[selector as keyof PortfolioProps]?.length !== 0
     );
     skillsToShow = filteredExperiences.slice(0, 3);
     moreSkillsToShow = filteredExperiences.slice(3);
