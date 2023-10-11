@@ -15,7 +15,7 @@ const SecondaryNavbar = ({ onSectionSelected, selectedItem }: IProps) => {
     return;
   };
   return (
-    <ul className="flex flex-col w-1/4 text-purple">
+    <ul className="md:flex md:flex-col w-1/4 text-purple hidden">
       {NAVBAR_LIST.map((item) => (
         <li
           key={item.selector}

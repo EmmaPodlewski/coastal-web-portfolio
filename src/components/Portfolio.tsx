@@ -26,11 +26,12 @@ export default function Portfolio() {
   };
 
   if (selector !== "all") {
-    const filteredExperiences = portfolioSkills.filter(
-      (skill) =>
+    const filteredExperiences = portfolioSkills.filter((skill) => {
+      if (selector in portfolioSkills) {
         skill[selector as keyof PortfolioProps] &&
-        skill[selector as keyof PortfolioProps]?.length !== 0
-    );
+          skill[selector as keyof PortfolioProps]?.length !== 0;
+      }
+    });
     skillsToShow = filteredExperiences.slice(0, 3);
     moreSkillsToShow = filteredExperiences.slice(3);
   }
@@ -42,7 +43,7 @@ export default function Portfolio() {
           onSectionSelected={sectionSelectedHandler}
           selectedItem={selector}
         />
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:w-2/3 gap-2">
           {skillsToShow.map((skill) => {
             return (
               <PortfolioCard
