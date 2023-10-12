@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command !== "serve") {
-    config.base = "/coastal-web-portfolio/";
+    config.base = "/";
   }
 
   return config;
