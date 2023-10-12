@@ -17,7 +17,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: import.meta.env.DEV ? "/" : "/coastal-web-portfolio/" }
+  { basename: "/" }
 );
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
